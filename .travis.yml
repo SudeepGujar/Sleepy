@@ -9,13 +9,11 @@ branches:
 before_script:
   - npm install -g @angular/cli
 script:
-- ng lint
 - ng build --prod --base-href https://sudeepgujar.github.io/Sleepy/
 
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
-  local_dir: dist/Sleepy
   on:
     branch: master
